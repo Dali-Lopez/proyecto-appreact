@@ -5,7 +5,7 @@ import Home from './pages/Home.js';
 import Dietas from './pages/Dietas.js'
 import FormularioProductos from './pages/consultasbd/FormularioProductos'
 import Eliminar from './pages/consultasbd/Eliminar.js';
-import logo from '../img/logoN.png'
+import fondoheader from '../img/comidafondo.jpg'
 import logosvg from '../img/logoNutricion.svg'
 class MainHeader extends Component {
     render() {
@@ -16,37 +16,57 @@ class MainHeader extends Component {
                     <meta charset="utf-8"></meta>
                     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 </head>
-                <div class="container-fluid mt-3">
-                    <h1>K pazo master</h1>
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"><span class="navbar-logo">Logo_A</span></a>
+                <div className="p-5 text-center bg-info">
+                    <div className="mask">
+                        <div className="d-flex justify-content-center align-items-center h-100">
+                            <div className="text-white">
+                                <h1 className="mb-3">¡Cuida tu salud!</h1>
+                                <h3 className="mb-4">Elije la mejor dieta para tu vida</h3>
+                                {/* <a className="btn btn-outline-light btn-lg m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow noreferrer" target="_blank" alt="">
+                                    Start tutorial
+                                </a>
+                                <a
+                                    className="btn btn-outline-light btn-lg m-2"
+                                    href="https://mdbootstrap.com/docs/standard/"
+                                    target="_blank"
+                                    role="button"
+                                    alt="" rel="noreferrer">
+                                    Download MDB UI KIT
+                                </a> */}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <Router>
-                <nav class="navbar navbar-expand-sm  bg-primary navbar-dark sticky-top">
-                        <div class="container-fluid">
+                    <nav className="navbar navbar-expand-xl  bg-primary navbar-dark sticky-top">
+                    {/* <nav className="navbar navbar-expand-sm  bg-primary navbar-dark sticky-top "> */}
+                        <div className="collaps navbar-collapse" >
+                        {/* <div className="container-fluid" > */}
                             <a className="navbar-brand" alt="Inicio">
-                                <img src={logosvg} width="40px" height="40px" alt=""></img>
+                                <img src={logosvg} width="50px" height="50px" alt=""></img>
                             </a>
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav mr-auto">
                                 <li className="nav-item active">
-                                    <Link className="nav-link" to="/">Inicio</Link>
+                                    <h5>
+                                        <Link className="nav-link text-white" to="/">Inicio</Link>
+                                    </h5>
                                 </li>
                                 <li className="nav-item active">
-                                    <Link className="nav-link" to="Dietas">Dietas</Link>
+                                    <h5>
+                                        <Link className="nav-link text-white" to="Dietas">Dietas</Link>
+                                    </h5>
                                 </li>
 
                                 <li className="nav-item active">
-                                    <Link className="nav-link" to="FormularioProductos">Agregar una dieta</Link>
+                                    <h5>
+                                        <Link className="nav-link text-white" to="FormularioProductos">Agregar una dieta</Link>
+                                    </h5>
                                 </li>
 
                                 <li className="nav-item active">
-                                    <Link className="nav-link" to="Eliminar">Editar dietas</Link>
+                                    <h5>
+                                        <Link className="nav-link text-white" to="Eliminar">Editar dietas</Link>
+                                    </h5>
                                 </li>
                             </ul>
 
@@ -70,7 +90,7 @@ class MainHeader extends Component {
                                 </li>
                             </ul> */}
                         </div>
-                </nav>
+                    </nav>
                     <Routes>
                         <Route exact path="/" element={<Home />}></Route>
                         <Route exact path="Dietas" element={<Dietas />}></Route>
@@ -80,7 +100,7 @@ class MainHeader extends Component {
                 </Router>
 
                 <div class="container-fluid">
-                            
+
                 </div>
                 {/* <div class="container-fluid mt-3">
                 <h3>Sticky Navbar</h3>
