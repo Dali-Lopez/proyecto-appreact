@@ -18,43 +18,69 @@ class MainHeader extends Component {
                 </head>
                 <div class="container-fluid mt-3">
                     <h1>K pazo master</h1>
-                </div>
-
-                <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Sticky top</a>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><span class="navbar-logo">Logo_A</span></a>
                     </div>
+                </div>
+                <Router>
+                <nav class="navbar navbar-expand-sm  bg-primary navbar-dark sticky-top">
+                        <div class="container-fluid">
+                            <a className="navbar-brand" alt="Inicio">
+                                <img src={logosvg} width="40px" height="40px" alt=""></img>
+                            </a>
+                            <ul className="navbar-nav">
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/">Inicio</Link>
+                                </li>
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="Dietas">Dietas</Link>
+                                </li>
+
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="FormularioProductos">Agregar una dieta</Link>
+                                </li>
+
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="Eliminar">Editar dietas</Link>
+                                </li>
+                            </ul>
+
+                            {/* <Link className="nav-link" to="/">Inicio</Link> */}
+
+                            {/* <ul className="navbar-nav">
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/">Inicio</Link>
+                                </li>
+
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="Dietas">Dietas</Link>
+                                </li>
+
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="FormularioProductos">Agregar una dieta</Link>
+                                </li>
+
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="Eliminar">Editar dietas</Link>
+                                </li>
+                            </ul> */}
+                        </div>
                 </nav>
+                    <Routes>
+                        <Route exact path="/" element={<Home />}></Route>
+                        <Route exact path="Dietas" element={<Dietas />}></Route>
+                        <Route exact path="FormularioProductos" element={<FormularioProductos />}></Route>
+                        <Route exact path="Eliminar" element={<Eliminar />}></Route>
+                    </Routes>
+                </Router>
 
                 <div class="container-fluid">
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
-                    <p>Some example text.Some example text.Some example text.Some example text.Some example text.</p>
+                            
                 </div>
                 {/* <div class="container-fluid mt-3">
                 <h3>Sticky Navbar</h3>
