@@ -3,12 +3,16 @@ import { useState} from 'react'
 
 export default function FormularioProductos(){
     const [data, setData] = useState({
-        nombre: '',
-        info: ''
+        titulo: '',
+        descripcion: '',
+        contenido: '',
+        tipo: ''
+        // nombre: '',
+        // info: ''
     })
     function recibeDatos (event){
         setData({...data, [event.target.name]: event.target.value})
-        console.log(data.nombre)
+        console.log(data.titulo)
     }
     function agregarDatos(event) {
         event.preventDefault();
@@ -21,8 +25,10 @@ export default function FormularioProductos(){
             }
         }).then(res=>res.json())
         .then(data=>({
-            nombre:'',
-            info: ''
+            titulo: '',
+            descripcion: '',
+            contenido: '',
+            tipo: ''
         }))
 
     }
@@ -31,35 +37,58 @@ export default function FormularioProductos(){
         <div className="container">
             <form className="form-horizontal" onSubmit={agregarDatos}>
                 <div className="form-group">
-                    <label className="">Nombre</label>
+                    <label className="">titulo</label>
                     <div class="col-sm-10">
                         <input 
                         type="text"
-                        name="nombre"
+                        name="titulo"
                         className="form-control"
-                        placeholder="Ingresar un nombre" 
-                        value = {data.nombre}
+                        placeholder="Ingresar titulo" 
+                        value = {data.titulo}
                         onChange={recibeDatos}
                         />
                     </div>
                 </div>
                 <div className="form-group">
-                    <label className="">Información</label>
+                    <label className="">Descripcion</label>
                     <div classNAme=" col-sm-offset-2col-sm-10">
                         <input
                         type="text"
-                        name="info"
+                        name="descripcion"
                         className="form-control"
-                        placeholder="Ingresar información" 
-                        value={data.info}
+                        placeholder="Ingresar una descripción" 
+                        value={data.descripcion}
                         onChange={recibeDatos}
                         />
                     </div>
                 </div>
                 <div className="form-group">
-                    <div className="col-sm-offset-2 col-sm-10">
+                    <label className="">contenido</label>
+                    <div classNAme=" col-sm-offset-2col-sm-10">
+                        <input
+                        type="text"
+                        name="contenido"
+                        className="form-control"
+                        placeholder="Ingresar contenido" 
+                        value={data.contenido}
+                        onChange={recibeDatos}
+                        />
                     </div>
                 </div>
+                <div className="form-group">
+                    <label className="">Tipo</label>
+                    <div classNAme=" col-sm-offset-2col-sm-10">
+                        <input
+                        type="text"
+                        name="tipo"
+                        className="form-control"
+                        placeholder="Ingresar un tipo" 
+                        value={data.tipo}
+                        onChange={recibeDatos}
+                        />
+                    </div>
+                </div>
+                
                 <div className="form-group">
                     <div className="col-sm-offset-2 col-sm-10">
                         <button type="submit" className="btn btn-primary">Submit</button>
