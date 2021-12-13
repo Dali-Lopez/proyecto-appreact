@@ -7,6 +7,7 @@ import FormularioProductos from './pages/consultasbd/FormularioProductos'
 import Eliminar from './pages/consultasbd/Eliminar.js';
 import fondoheader from '../img/comidafondo.jpg'
 import logosvg from '../img/logoNutricion.svg'
+// hoy 13 de dic
 class MainHeader extends Component {
     render() {
         return (
