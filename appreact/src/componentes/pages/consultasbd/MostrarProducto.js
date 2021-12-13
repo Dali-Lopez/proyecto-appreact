@@ -24,8 +24,8 @@ export default function MostrarProducto({dietas}){
                         <div className="col-md-3">
                             <div className="card">
                                 <div className ="card-body">
-                                    <h5 className ="card-title">{valor.nombre}</h5>
-                                    <p className ="card-footer">{valor.info}</p>
+                                    <h5 className ="card-title">{valor.titulo}</h5>
+                                    <p className ="card-footer">{valor.descripcion}</p>
                                 </div>
                             </div>
                         </div>
