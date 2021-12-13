@@ -7,6 +7,7 @@ class MainBody extends Component {
             <body>
                 <div className="container">
                     <div className="row">
+                        {/* <div className="col-md-1 bg-primary">a</div>
                         <div className="col-md-1 bg-primary">a</div>
                         <div className="col-md-1 bg-primary">a</div>
                         <div className="col-md-1 bg-primary">a</div>
@@ -17,8 +18,7 @@ class MainBody extends Component {
                         <div className="col-md-1 bg-primary">a</div>
                         <div className="col-md-1 bg-primary">a</div>
                         <div className="col-md-1 bg-primary">a</div>
-                        <div className="col-md-1 bg-primary">a</div>
-                        <div className="col-md-1 bg-primary">a</div>
+                        <div className="col-md-1 bg-primary">a</div> */}
                         {/* <div className="col-md-1" background-color="blue">aaa</div> */}
                     </div>
                     
