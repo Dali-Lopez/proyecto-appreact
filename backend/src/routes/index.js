@@ -9,7 +9,15 @@ router.get('/getregistro',async (req,res) => {
     const producto = await Producto.find()
     res.send(producto)
 })
-
+router.get('/deleteRegistro/:id', async (req, res) => {
+    const { id } = req.params
+    await Producto.remove({_id:id})
+})
+router.get('/getRegistro/id', async (req, res) => {
+    const { id } = req.params
+    const producto = await Producto.findById(id)
+    res.send(producto)
+})
 router.post('/addRegistro', async(req, res) => {
     console.log(req.body)
     const producto = new Producto(req.body)

@@ -36,8 +36,11 @@ export default function FormularioProductos(){
 
         <div className="container">
             <form className="form-horizontal" onSubmit={agregarDatos}>
+                <h1>Agrega una nueva dieta</h1>
                 <div className="form-group">
-                    <label className="">titulo</label>
+                    <h4>
+                    <label className="">Titulo</label>
+                    </h4>
                     <div class="col-sm-10">
                         <input 
                         type="text"
@@ -50,8 +53,10 @@ export default function FormularioProductos(){
                     </div>
                 </div>
                 <div className="form-group">
+                    <h4>
                     <label className="">Descripcion</label>
-                    <div classNAme=" col-sm-offset-2col-sm-10">
+                    </h4>
+                    <div className=" col-sm-10">
                         <input
                         type="text"
                         name="descripcion"
@@ -63,9 +68,11 @@ export default function FormularioProductos(){
                     </div>
                 </div>
                 <div className="form-group">
-                    <label className="">contenido</label>
-                    <div classNAme=" col-sm-offset-2col-sm-10">
-                        <input
+                    <h4>
+                        <label className="">Contenido</label>
+                    </h4>
+                    <div className=" col-sm-10">
+                        <textarea rows="20"
                         type="text"
                         name="contenido"
                         className="form-control"
@@ -76,24 +83,29 @@ export default function FormularioProductos(){
                     </div>
                 </div>
                 <div className="form-group">
-                    <label className="">Tipo</label>
-                    <div classNAme=" col-sm-offset-2col-sm-10">
+                    <h4>
+                        <label className="">Tipo</label>
+                    </h4>
+                    <div className="col-sm-10">
                         <input
                         type="text"
                         name="tipo"
                         className="form-control"
-                        placeholder="Ingresar un tipo" 
+                        placeholder="Ingresar un tipo"
                         value={data.tipo}
                         onChange={recibeDatos}
                         />
                     </div>
                 </div>
-                
+                <br>
+                </br>
                 <div className="form-group">
-                    <div className="col-sm-offset-2 col-sm-10">
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                    <div className="col-sm-10">
+                        <button type="submit" className="btn btn-primary">Agregar</button>
                     </div>
                 </div>
+                <br>
+                </br>
             </form>
         </div>
     )
