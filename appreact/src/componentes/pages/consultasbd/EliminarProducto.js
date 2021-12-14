@@ -14,40 +14,29 @@ export default function MostrarProducto({ dietas }) {
         }
     })
     return (
-        <div className="container-fluid">
+        <div className="container-fluid col-sm-11">
             <h1>Dietas actuales</h1>
-            {dietas.map((valor, cont) => (
-                <div key={cont}>
-                    <table class="table table-responsive">
-                        <thead>
-                            <tr>
-                                <th><h5>Titulo</h5></th>
-                                <th><h5>Descripcion</h5></th>
-                                <th><h5>Tipo</h5></th>
-                                <th><h5>Acción</h5></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="col-sm-3"> <h6> {valor.titulo} </h6> </td>
-                                <td className="col-sm-3"><h6>{valor.descripcion} </h6></td>
-                                <td className="col-sm-3"><h6>{valor.tipo}</h6></td>
-                                <td className="col-sm-3"><button className="btn btn-danger" onClick={() => setValue(valor._id)}>Eliminar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            ))}
-            {/* {dietas.map((valor, cont) => (
-                <div key={cont}>
+            <br></br>
+            <table class="table table-striped">
+                <thead>
                     <tr>
-                        <td>{valor.titulo}</td>
-                        <td>{valor.descripcion}</td>
-                        <td>{valor.tipo}</td>
-                        <td><button className="btn btn-danger" onClick={() => setValue(valor._id)}>Eliminar</button></td>
+                        <th scope="col"><h3>Titulo</h3></th>
+                        <th scope="col"><h3>Descripcion</h3></th>
+                        <th scope="col"><h3>Tipo</h3></th>
+                        <th scope="col"><h3>Acción</h3></th>
                     </tr>
-                </div>
-            ))} */}
+                </thead>
+                <tbody>
+                    {dietas.map((valor, cont) => (
+                        <tr key={cont}>
+                            <td ><h5> {valor.titulo} </h5> </td>
+                            <td ><h5>{valor.descripcion} </h5></td>
+                            <td ><h5>{valor.tipo}</h5></td>
+                            <td ><button className="btn btn-danger d-flex justify-content-end" onClick={() => setValue(valor._id)}>Eliminar</button></td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }
