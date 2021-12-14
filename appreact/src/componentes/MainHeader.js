@@ -17,7 +17,7 @@ class MainHeader extends Component {
                     <meta charset="utf-8"></meta>
                     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 </head>
-                <div className="p-5 text-center bg-info">
+                <div className="p-5 text-center bg-primary">
                     <div className="mask">
                         <div className="d-flex justify-content-center align-items-center h-100">
                             <div className="text-white">
@@ -39,7 +39,8 @@ class MainHeader extends Component {
                     </div>
                 </div>
                 <Router>
-                    <nav className="navbar navbar-expand-xl  bg-primary navbar-dark sticky-top">
+                    <nav className="navbar navbar-expand-xl  bg-dark navbar-dark sticky-top">
+                    {/* <nav className="navbar navbar-expand-xl  bg-primary navbar-dark sticky-top"> */}
                     {/* <nav className="navbar navbar-expand-sm  bg-primary navbar-dark sticky-top "> */}
                         <div className="collaps navbar-collapse" >
                         {/* <div className="container-fluid" > */}

@@ -15,6 +15,7 @@ export default function MostrarProducto({ dietas }) {
     })
     return (
         <div className="container-fluid col-sm-11">
+            <br></br>
             <h1>Dietas actuales</h1>
             <br></br>
             <table class="table table-striped">
